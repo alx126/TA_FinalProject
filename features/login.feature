@@ -23,7 +23,7 @@ Feature: Test the functionality of the Login Page
     Given I am on the Login Page
 
   @simple @smoke
-  #Scenariu1 fara parametru
+  #Scenariu fara parametru
   Scenario: Check that "No customer account found" message is displayed when the user tries to log in with an unregistered email
     When I insert an unregistered email in the email input
     When I insert a password in the password input
@@ -32,7 +32,7 @@ Feature: Test the functionality of the Login Page
     Then The error text contains "No customer account found" message
 
   @parameterized @smoke
-  #Scenariu1 cu parametru
+  #Scenariu cu parametru
   Scenario: Check that "No customer account found" message is displayed when the user tries to log in with an unregistered email
     When I insert "wrong_email@host.com" in the email input
     When I insert "parolaoarecare" in the password input

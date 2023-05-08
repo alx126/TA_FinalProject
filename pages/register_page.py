@@ -25,7 +25,10 @@ class RegisterPage(BasePage):
     PASSWORD_ERROR = (By.ID, "Password-error")
     CONFIRM_PASSWORD_ERROR = (By.ID, "ConfirmPassword-error")
 
+    COMPLETE_REGISTRATION_MESSAGE = (By.CLASS_NAME, 'result')
+
     REGISTER_PAGE_URL = "https://demo.nopcommerce.com/register"
+    # https://demo.nopcommerce.com/registerresult/1
 
     def navigate_to_register_page(self):
         self.driver.get(self.REGISTER_PAGE_URL)
@@ -39,11 +42,32 @@ class RegisterPage(BasePage):
     def set_first_name(self, first_name):
         self.type(self.FIRST_NAME_INPUT, first_name)
 
+    def set_last_name(self, last_name):
+        self.type(self.LAST_NAME_INPUT, last_name)
+
     def select_date_of_birth_day(self, day):
         self.select_dropdown_option_by_text(self.DAY_DROPDOWN, day)
 
+    def select_date_of_birth_month(self, month):
+        self.select_dropdown_option_by_text(self.MONTH_DROPDOWN, month)
+
+    def select_date_of_birth_year(self, year):
+        self.select_dropdown_option_by_text(self.YEAR_DROPDOWN, year)
+
+    def set_email(self, email):
+        self.type(self.EMAIL_INPUT, email)
+
+    def set_company_name(self, company_name):
+        self.type(self.COMPANY_INPUT, company_name)
+
     def check_newsletter_checkbox(self):
         self.check_checkbox(self.NEWSLETTER_CHECKBOX)
+
+    def set_password(self, password):
+        self.type(self.PASSWORD_INPUT, password)
+
+    def set_confirm_password(self, password):
+        self.type(self.CONFIRM_PASSWORD_INPUT, password)
 
     def click_register_button(self):
         self.click(self.REGISTER_BUTTON)
@@ -62,3 +86,6 @@ class RegisterPage(BasePage):
 
     def is_password_confirm_error_displayed(self):
         return self.is_element_displayed(self.CONFIRM_PASSWORD_ERROR)
+
+    def is_complete_registration_message_displayed(self):
+        return self.is_element_displayed(self.COMPLETE_REGISTRATION_MESSAGE)

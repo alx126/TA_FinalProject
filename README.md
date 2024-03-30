@@ -1,10 +1,16 @@
 Proiect de testare automata BDD Python
 
+
+
 Implementare teste automate pentru magazin online
 
 Site: https://demo.nopcommerce.com/
 
 Limbaj: Python (https://www.python.org/downloads/)
+
+Metodologie: Behavior Driven Design (BDD)
+
+Design pattern: Page object model (POM)
 
 IDE: PyCharm Community Edition 2023.2.3  (https://www.jetbrains.com/pycharm/download/?section=windows)
 

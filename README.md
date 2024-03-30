@@ -35,6 +35,8 @@ Instructiuni clonare proiect
 3. In folder se deschide Git BASH cu comanda Git Bash Here: Click dreapta in folder si selectezi Git Bash Here din context menu  ![image](https://github.com/alx126/TA_FinalProject/assets/93679540/f50ca661-f78c-4533-81ff-2b9d10b6ad1c)
 4. In fereastra deschisa introduci: git clone + link proiect (click dreapta - Paste) si apesi Enter  ![image](https://github.com/alx126/TA_FinalProject/assets/93679540/4f2c22fa-cd2c-458b-be53-703854a49363)
 
+Instructiuni rulare proiect
+1. Deschide proiectul in PyCharm: ![image](https://github.com/alx126/TA_FinalProject/assets/93679540/1345a113-919d-4d74-bbe8-0e7b69366128)
 
 
 

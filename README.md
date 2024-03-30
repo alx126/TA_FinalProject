@@ -32,7 +32,7 @@ Instructiuni clonare proiect
 1. Instalare Git Hub
 2. Inregistrare cont Git Hub
 3. Creare un folder nou local, aici se va instala proiectul
-4. In folder se deschide Git BASH cu comanda Git Bash Here ![image](https://github.com/alx126/TA_FinalProject/assets/93679540/f50ca661-f78c-4533-81ff-2b9d10b6ad1c)
+4. In folder se deschide Git BASH cu comanda Git Bash Here: Click dreapta in folder si selectezi Git Bash Here din context menu  ![image](https://github.com/alx126/TA_FinalProject/assets/93679540/f50ca661-f78c-4533-81ff-2b9d10b6ad1c)
 5. 
 
 

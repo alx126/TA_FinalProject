@@ -6,13 +6,13 @@ Site: https://demo.nopcommerce.com/
 Limbaj: Python
 IDE: PyCharm Community Edition 2023.2.3
 
-Librarie                  Comanda in terminal pentru instalare
+**Librarie              |    Comanda in terminal pentru instalare**
 -----------------------------------------------------------------
-Selenium                   pip install selenium
+Selenium              |    pip install selenium
 -----------------------------------------------------------------
-Webdrive manager           pip install webdriver-manager
+Webdrive manager      |    pip install webdriver-manager
 -----------------------------------------------------------------
-Behave
+Behave                |    pip install behave
 -----------------------------------------------------------------
 
 

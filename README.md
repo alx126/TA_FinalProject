@@ -4,6 +4,7 @@ Proiect de testare automata BDD Python
 
 Implementare teste automate pentru magazin online
 
+
 Site: https://demo.nopcommerce.com/
 
 Limbaj: Python (https://www.python.org/downloads/)
@@ -24,6 +25,15 @@ Behave                |    pip install behave
 -----------------------------------------------------------------
 Behave-html-formatter |   pip install behave-html-formatter
 -----------------------------------------------------------------
+
+
+
+Instructiuni clonare proiect
+1. Instalare Git Hub
+2. Inregistrare cont Git Hub
+3. Creare un folder nou local, aici se va instala proiectul
+4. In folder se deschide Git BASH cu comanda Git Bash Here ![image](https://github.com/alx126/TA_FinalProject/assets/93679540/f50ca661-f78c-4533-81ff-2b9d10b6ad1c)
+5. 
 
 
 Exemple de comenzi pentru a rula teste cu tag-uri:

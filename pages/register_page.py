@@ -24,6 +24,8 @@ class RegisterPage(BasePage):
     EMAIL_ERROR = (By.ID, "Email-error")
     PASSWORD_ERROR = (By.ID, "Password-error")
     CONFIRM_PASSWORD_ERROR = (By.ID, "ConfirmPassword-error")
+    WRONG_EMAIL_ERROR = (By.XPATH, "/html/body/div[6]/div[3]/div/div/div/div[2]/form/div[1]/ul/li") #CLASS_NAME, "message-error"
+
 
     COMPLETE_REGISTRATION_MESSAGE = (By.CLASS_NAME, 'result')
 
@@ -63,6 +65,9 @@ class RegisterPage(BasePage):
     def check_newsletter_checkbox(self):
         self.check_checkbox(self.NEWSLETTER_CHECKBOX)
 
+    def uncheck_newsletter_checkbox(self):
+        self.uncheck_checkbox(self.NEWSLETTER_CHECKBOX)
+
     def set_password(self, password):
         self.type(self.PASSWORD_INPUT, password)
 
@@ -80,6 +85,15 @@ class RegisterPage(BasePage):
 
     def is_email_error_displayed(self):
         return self.is_element_displayed(self.EMAIL_ERROR)
+
+    def get_register_email_error_text(self):
+        return self.get_element_text(self.EMAIL_ERROR)
+
+    def get_register_wrong_email_error_text(self):
+        return self.get_element_text(self.WRONG_EMAIL_ERROR)
+
+    def is_wrong_email_error_displayed(self):
+        return self.is_element_displayed(self.WRONG_EMAIL_ERROR)
 
     def is_password_error_displayed(self):
         return self.is_element_displayed(self.PASSWORD_ERROR)

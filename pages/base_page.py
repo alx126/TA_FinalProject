@@ -57,12 +57,13 @@ class BasePage(Browser):
 
     def check_checkbox(self, checkbox_locator):
         checkbox_element = self.find(checkbox_locator)
-
         if not checkbox_element.is_selected():
             self.click(checkbox_element)
 
     def uncheck_checkbox(self, checkbox_locator):
         checkbox_element = self.find(checkbox_locator)
+        if checkbox_element.is_selected():
+            self.click(checkbox_element)
 
         if checkbox_element.is_selected():
             self.click(checkbox_element)

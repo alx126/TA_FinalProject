@@ -12,6 +12,12 @@ class LoginPage(BasePage):
     ERROR_MESSAGE_EMAIL = (By.ID, "Email-error")
     FORGOT_PASSWORD_LINK = (By.XPATH, "//a[text()='Forgot password?']")
 
+    MY_ACCOUNT_BUTTON = (By.CLASS_NAME, "ico-account")
+    LOG_OUT_BUTTON = (By.CLASS_NAME, "ico-logout")
+    WISHLIST_BUTTON = (By.CLASS_NAME, "ico-wishlist")
+    SHOPPING_CART_BUTTON = (By.CLASS_NAME, "ico-cart")
+    LOGGED_IN_BUTTONS = (By.CLASS_NAME, "ico-")
+
     LOGIN_PAGE_URL = "https://demo.nopcommerce.com/login"
 
     def navigate_to_login_page(self):
@@ -46,8 +52,27 @@ class LoginPage(BasePage):
     def is_email_error_message_displayed(self):
         return self.is_element_displayed(self.ERROR_MESSAGE_EMAIL)
 
-    def get_email_error_message_text(self):
+    def get_login_email_error_message_text(self):
         return self.get_element_text(self.ERROR_MESSAGE_EMAIL)
 
     def is_no_customer_account_found_message_displayed(self):
         return "No customer account found" in self.get_main_error_message_text()
+
+    def is_logout_button_displayed(self):
+        return self.is_element_displayed(self.LOG_OUT_BUTTON)
+
+    def is_myaccount_button_displayed(self):
+        return self.is_element_displayed(self.MY_ACCOUNT_BUTTON)
+
+    def is_wishlist_button_displayed(self):
+        return self.is_element_displayed(self.WISHLIST_BUTTON)
+
+    def is_shoppingcart_button_displayed(self):
+        return self.is_element_displayed(self.SHOPPING_CART_BUTTON)
+
+    def is_button_displayed(self, text: str):
+        buttons_list = self.find_all(self.LOGGED_IN_BUTTONS)
+        for button in buttons_list:
+            if text.lower() not in button.text.lower():
+                return False
+        return True

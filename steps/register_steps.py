@@ -100,6 +100,7 @@ def step_impl(context, message):
 def step_impl(context, message):
     assert context.register_page.get_register_wrong_email_error_text() == message
 
+
 @then('Password error is displayed')
 def step_impl(context):
     assert context.register_page.is_password_error_displayed()

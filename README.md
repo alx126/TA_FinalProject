@@ -33,7 +33,8 @@ Instructiuni clonare proiect
 1. Copiaza linkul proiectului: https://github.com/alx126/TA_FinalProject.git
 2. Creare un folder nou local, aici se va instala proiectul
 3. In folder se deschide Git BASH cu comanda Git Bash Here: Click dreapta in folder si selectezi Git Bash Here din context menu  ![image](https://github.com/alx126/TA_FinalProject/assets/93679540/f50ca661-f78c-4533-81ff-2b9d10b6ad1c)
-4. In fereastra deschisa introduci: git clone + link proiect (click dreapta - Paste) si apesi Enter
+4. In fereastra deschisa introduci: git clone + link proiect (click dreapta - Paste) si apesi Enter  ![image](https://github.com/alx126/TA_FinalProject/assets/93679540/4f2c22fa-cd2c-458b-be53-703854a49363)
+
 
 
 

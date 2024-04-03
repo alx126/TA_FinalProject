@@ -8,7 +8,7 @@ def step_impl(context):
 
 @when('I type "{text}" in the search input')
 def step_impl(context, text):
-    context.home_page.type_text_on_search_input(text)
+    context.home_page.type_text_in_search_input(text)
 
 
 @when('I click the search button')

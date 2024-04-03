@@ -4,6 +4,24 @@ Feature: Test the functionality of the Login Page
   Background: I am on the Login Page
     Given I am on the Login Page
 
+
+  @simple @login @url
+  Scenario: Check that the url is correct
+    Then Login page URL is "https://demo.nopcommerce.com/login"
+
+
+  @login_
+  Scenario: Check that the login is done successfully with a registered account
+    When I insert "alex.popa@fakes.com" in the email input
+    When I insert "myPassw0rd" in the password input
+    When I click on the login button
+    Then Login page URL is "https://demo.nopcommerce.com/"
+    Then "My account" button is displayed
+    Then "Log out" button is displayed
+    Then "Wishlist" button is displayed
+    Then "Shopping cart" button is displayed
+    Then "Log out" button is displayed on top
+
   @simple @smoke @login
   #Scenariu fara parametru
   Scenario: Check that "No customer account found" message is displayed when the user tries to log in with an
@@ -38,19 +56,4 @@ Feature: Test the functionality of the Login Page
     Then Email error message is displayed
     Then Email error message text is "Wrong email"
 
-  @simple @regression @login
-  Scenario: Check that the url is correct
-    Then Login page URL is "https://demo.nopcommerce.com/login"
-
-  @login_
-  Scenario: Check that the login is done successfully with a registered account
-    When I insert "alex.popa@fake.com" in the email input
-    When I insert "myPassw0rd" in the password input
-    When I click on the login button
-    Then Login page URL is "https://demo.nopcommerce.com/"
-    Then "My account" button is displayed
-    Then "Log out" button is displayed
-    Then "Wishlist" button is displayed
-    Then "Shopping cart" button is displayed
-    Then "Log out" button is displayed on top
 

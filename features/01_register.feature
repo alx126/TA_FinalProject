@@ -58,7 +58,7 @@ Feature: Test the functionality of the Register Page
         When I select day "26" for Date of birth
         When I select month "May" for Date of birth
         When I select year "2015" for Date of birth
-        When I insert "alex.popescu@faked.com" in the Email field
+        When I insert "alex.popa@fakes.com" in the Email field
         When I insert "APOLLO SRL" in the Company name field
         When I check the Newsletter checkbox
         When I insert "myPassw0rd" in the Password field
@@ -75,7 +75,7 @@ Feature: Test the functionality of the Register Page
         When I select day "26" for Date of birth
         When I select month "May" for Date of birth
         When I select year "2015" for Date of birth
-        When I insert "alex.popescu@faked.com" in the Email field
+        When I insert "alex.popa@fakes.com" in the Email field
         When I insert "APOLLO SRL" in the Company name field
         When I check the Newsletter checkbox
         When I insert "myPassw0rd" in the Password field

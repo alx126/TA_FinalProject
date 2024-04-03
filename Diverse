@@ -1,0 +1,19 @@
+
+  """
+  - Background este o modalitate prin care putem sa dam un context general testelor noastre
+  - Functioneaza numai cu GIVEN
+  - Putem sa punem in background orice context care e valabil pentru toate scenariile din feature
+  """
+
+
+  """
+  - Daca vrem sa separam testele in categorii putem sa ne folosim de conceptul de tag-uri
+  - Tag-urile incep cu semnul @ si sunt urmate de un text (recomandat sa fie ceva sugestiv pentru scenariul in scop)
+  - Un scenariu poate sa fie identificat de mai multe tag-uri
+  - In momentul rularii putem specifica tag-ul care ne intereseaza si se vor rula doar testele identificate de acel tag
+
+  Exemple de comenzi pentru a rula teste cu tag-uri:
+  behave --tags=smoke
+  behave -f html -o behave-report.html --tags=smoke
+  behave --tags=smoke,simple  [FARA SPATIU INTRE TAG-URI IN ACEST CAZ!]
+  """

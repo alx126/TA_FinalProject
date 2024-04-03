@@ -25,7 +25,8 @@ class RegisterPage(BasePage):
     PASSWORD_ERROR = (By.ID, "Password-error")
     CONFIRM_PASSWORD_ERROR = (By.ID, "ConfirmPassword-error")
     WRONG_EMAIL_ERROR = (By.XPATH, "/html/body/div[6]/div[3]/div/div/div/div[2]/form/div[1]/ul/li") #CLASS_NAME, "message-error"
-
+    ALREADY_REGISTERED_EMAIL_ERROR = (By.CLASS_NAME, "message-error")
+    ALREADY_REGISTERED_EMAIL_ERR_MSG = (By.XPATH, "//*[@class='message-error validation-summary-errors']/ul/li")
 
     COMPLETE_REGISTRATION_MESSAGE = (By.CLASS_NAME, 'result')
 
@@ -103,3 +104,10 @@ class RegisterPage(BasePage):
 
     def is_complete_registration_message_displayed(self):
         return self.is_element_displayed(self.COMPLETE_REGISTRATION_MESSAGE)
+
+    def is_already_registered_email_message_displayed(self):
+        return self.is_element_displayed(self.ALREADY_REGISTERED_EMAIL_ERROR)
+
+    def get_already_registered_email_message_text(self):
+        return self.get_element_text(self.ALREADY_REGISTERED_EMAIL_ERR_MSG)
+

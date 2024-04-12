@@ -24,7 +24,7 @@ class RegisterPage(BasePage):
     EMAIL_ERROR = (By.ID, "Email-error")
     PASSWORD_ERROR = (By.ID, "Password-error")
     CONFIRM_PASSWORD_ERROR = (By.ID, "ConfirmPassword-error")
-    WRONG_EMAIL_ERROR = (By.XPATH, "/html/body/div[6]/div[3]/div/div/div/div[2]/form/div[1]/ul/li") #CLASS_NAME, "message-error"
+    WRONG_EMAIL_ERROR = (By.XPATH, "//*[@class='message-error validation-summary-errors']/ul/li") #CLASS_NAME, "message-error"
     ALREADY_REGISTERED_EMAIL_ERROR = (By.CLASS_NAME, "message-error")
     ALREADY_REGISTERED_EMAIL_ERR_MSG = (By.XPATH, "//*[@class='message-error validation-summary-errors']/ul/li")
 
@@ -79,31 +79,31 @@ class RegisterPage(BasePage):
         self.click(self.REGISTER_BUTTON)
 
     def is_first_name_error_displayed(self):
-        return self.is_element_displayed(self.FIRST_NAME_ERROR)
+        assert self.is_element_displayed(self.FIRST_NAME_ERROR)
 
     def is_last_name_error_displayed(self):
-        return self.is_element_displayed(self.LAST_NAME_ERROR)
+        assert self.is_element_displayed(self.LAST_NAME_ERROR)
 
     def is_email_error_displayed(self):
-        return self.is_element_displayed(self.EMAIL_ERROR)
+        assert self.is_element_displayed(self.EMAIL_ERROR)
 
     def get_register_email_error_text(self):
         return self.get_element_text(self.EMAIL_ERROR)
 
     def get_register_wrong_email_error_text(self):
-        return self.get_element_text(self.WRONG_EMAIL_ERROR)
+        assert self.get_element_text(self.WRONG_EMAIL_ERROR)
 
     def is_wrong_email_error_displayed(self):
-        return self.is_element_displayed(self.WRONG_EMAIL_ERROR)
+        assert self.is_element_displayed(self.WRONG_EMAIL_ERROR)
 
     def is_password_error_displayed(self):
-        return self.is_element_displayed(self.PASSWORD_ERROR)
+        assert self.is_element_displayed(self.PASSWORD_ERROR)
 
     def is_password_confirm_error_displayed(self):
-        return self.is_element_displayed(self.CONFIRM_PASSWORD_ERROR)
+        assert self.is_element_displayed(self.CONFIRM_PASSWORD_ERROR)
 
     def is_complete_registration_message_displayed(self):
-        return self.is_element_displayed(self.COMPLETE_REGISTRATION_MESSAGE)
+        assert self.is_element_displayed(self.COMPLETE_REGISTRATION_MESSAGE)
 
     def is_already_registered_email_message_displayed(self):
         return self.is_element_displayed(self.ALREADY_REGISTERED_EMAIL_ERROR)

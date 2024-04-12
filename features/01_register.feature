@@ -3,7 +3,7 @@ Feature: Test the functionality of the Register Page
     Background: I am on the Register Page
     Given I am on the Register Page
 
-    @simple @register
+    @simple @register @unu
     Scenario: Check that trying to register without filling in any field displays error fields
       When I click on the Register button
       Then First name error is displayed
@@ -50,7 +50,7 @@ Feature: Test the functionality of the Register Page
       Then Wrong email error text is "Wrong email"
 
 
-      @register
+      @register @complete
       Scenario: Test complete registration
         When I select male gender
         When I insert "Alex" in the First name field

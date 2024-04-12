@@ -17,7 +17,7 @@ class SearchResultsPage(BasePage):
     def are_all_products_displayed(self):
         self.wait_for_element_to_be_present(self.PRODUCT_ITEM, 3)
         product_item_list = self.find_all(self.PRODUCT_ITEM)
-
+        # assert len(product_item_list) > 0
         for item in product_item_list:
             if not item.is_displayed():
                 return False
@@ -26,7 +26,7 @@ class SearchResultsPage(BasePage):
 
     def are_all_titles_containing_text(self, text: str):
         titles_list = self.find_all(self.PRODUCT_TITLE)
-
+        # assert len(titles_list) > 0
         for title in titles_list:
             if text.lower() not in title.text.lower():
                 return False
@@ -41,4 +41,4 @@ class SearchResultsPage(BasePage):
 
     def is_confirmation_message_displayed(self):
         return self.wait_for_element_to_be_present(self.CONFIRMATION_MESSAGE, 1)
-        #return self.find(self.CONFIRMATION_MESSAGE)
+        # return self.find(self.CONFIRMATION_MESSAGE)

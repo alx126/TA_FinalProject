@@ -47,7 +47,7 @@ class BasePage(Browser):
     # paginii din care apelam metoda
     def is_url_correct(self, expected_url):
         #return expected_url == self.driver.current_url
-        return expected_url in self.driver.current_url
+        assert expected_url in self.driver.current_url
 
     def type_text_in_search_input(self, text):
         # self.driver.find_element(*self.SEARCH_INPUT).send_keys(text)

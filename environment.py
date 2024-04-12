@@ -6,7 +6,7 @@ from pages.search_results_page import SearchResultsPage
 
 
 # before_all este o metoda care este recunoscuta de libraria behave si care se va executa inainte de toate testele
-def before_all(context):  # context ne ajuta sa accesam toate paginilie care vor putea fi folosite in alte fisiere
+def before_all(context):  # context ne ajuta sa accesam toate paginile care vor putea fi folosite in alte fisiere
     context.browser = Browser()
     context.login_page = LoginPage()
     context.search_results_page = SearchResultsPage()

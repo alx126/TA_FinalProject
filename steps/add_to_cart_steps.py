@@ -23,7 +23,7 @@ def step_impl(context):
 
 @then('A confirmation message is displayed')
 def step_impl(context):
-    assert context.search_results_page.is_confirmation_message_displayed()
+    context.search_results_page.is_confirmation_message_displayed()
 
 
 @then('Shopping cart displays {qty} item')

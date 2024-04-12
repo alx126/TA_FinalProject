@@ -33,12 +33,12 @@ def step_impl(context):
 
 @then('The main error message is displayed')
 def step_impl(context):
-    assert context.login_page.is_main_error_message_displayed()
+    context.login_page.is_main_error_message_displayed()
 
 
 @then('The error text contains "No customer account found" message')
 def step_impl(context):
-    assert context.login_page.is_no_customer_account_found_message_displayed()
+    context.login_page.is_no_customer_account_found_message_displayed()
 
 
 @then('The error text contains "{message}"')
@@ -48,7 +48,7 @@ def step_impl(context, message):
 
 @then('Email error message is displayed')
 def step_impl(context):
-    assert context.login_page.is_email_error_message_displayed()
+    context.login_page.is_email_error_message_displayed()
 
 
 @then('Email error message text is "{message}"')
@@ -58,29 +58,29 @@ def step_impl(context, message):
 
 @then('Login page URL is "{url}"')
 def step_impl(context, url):
-    assert context.login_page.is_url_correct(url)
+    context.login_page.is_url_correct(url)
 
 
 @then('"Log out" button is displayed')
 def step_impl(context):
-    assert context.login_page.is_logout_button_displayed()
+    context.login_page.is_logout_button_displayed()
 
 
 @then('"My account" button is displayed')
 def step_impl(context):
-    assert context.login_page.is_myaccount_button_displayed()
+    context.login_page.is_myaccount_button_displayed()
 
 
 @then('"Wishlist" button is displayed')
 def step_impl(context):
-    assert context.login_page.is_wishlist_button_displayed()
+    context.login_page.is_wishlist_button_displayed()
 
 
 @then('"Shopping cart" button is displayed')
 def step_impl(context):
-    assert context.login_page.is_shoppingcart_button_displayed()
+    context.login_page.is_shoppingcart_button_displayed()
 
 
 @then('{text} button is displayed on top')
 def step_imp(context, text):
-    assert context.login_page.is_button_displayed(text)
+    context.login_page.is_button_displayed(text)

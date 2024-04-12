@@ -44,31 +44,31 @@ class LoginPage(BasePage):
         self.click(self.FORGOT_PASSWORD_LINK)
 
     def is_main_error_message_displayed(self):
-        return self.is_element_displayed(self.ERROR_MESSAGE_MAIN)
+        assert self.is_element_displayed(self.ERROR_MESSAGE_MAIN)
 
     def get_main_error_message_text(self):
         return self.get_element_text(self.ERROR_MESSAGE_MAIN)
 
     def is_email_error_message_displayed(self):
-        return self.is_element_displayed(self.ERROR_MESSAGE_EMAIL)
+        assert self.is_element_displayed(self.ERROR_MESSAGE_EMAIL)
 
     def get_login_email_error_message_text(self):
         return self.get_element_text(self.ERROR_MESSAGE_EMAIL)
 
     def is_no_customer_account_found_message_displayed(self):
-        return "No customer account found" in self.get_main_error_message_text()
+        assert "No customer account found" in self.get_main_error_message_text()
 
     def is_logout_button_displayed(self):
-        return self.is_element_displayed(self.LOG_OUT_BUTTON)
+        assert self.is_element_displayed(self.LOG_OUT_BUTTON)
 
     def is_myaccount_button_displayed(self):
-        return self.is_element_displayed(self.MY_ACCOUNT_BUTTON)
+        assert self.is_element_displayed(self.MY_ACCOUNT_BUTTON)
 
     def is_wishlist_button_displayed(self):
-        return self.is_element_displayed(self.WISHLIST_BUTTON)
+        assert self.is_element_displayed(self.WISHLIST_BUTTON)
 
     def is_shoppingcart_button_displayed(self):
-        return self.is_element_displayed(self.SHOPPING_CART_BUTTON)
+        assert self.is_element_displayed(self.SHOPPING_CART_BUTTON)
 
     def is_button_displayed(self, text: str):
         buttons_list = self.find_all(self.LOGGED_IN_BUTTONS)

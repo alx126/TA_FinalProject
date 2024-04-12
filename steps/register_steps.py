@@ -73,22 +73,22 @@ def step_impl(context):
 
 @then('First name error is displayed')
 def step_impl(context):
-    assert context.register_page.is_first_name_error_displayed()
+    context.register_page.is_first_name_error_displayed()
 
 
 @then('Last name error is displayed')
 def step_impl(context):
-    assert context.register_page.is_last_name_error_displayed()
+    context.register_page.is_last_name_error_displayed()
 
 
 @then('Email error is displayed')
 def step_impl(context):
-    assert context.register_page.is_email_error_displayed()
+    context.register_page.is_email_error_displayed()
 
 
 @then('Wrong email error is displayed')
 def step_impl(context):
-    assert context.register_page.is_wrong_email_error_displayed()
+    context.register_page.is_wrong_email_error_displayed()
 
 
 @then('Email error text is "{message}"')
@@ -103,17 +103,17 @@ def step_impl(context, message):
 
 @then('Password error is displayed')
 def step_impl(context):
-    assert context.register_page.is_password_error_displayed()
+    context.register_page.is_password_error_displayed()
 
 
 @then('Confirm password error is displayed')
 def step_impl(context):
-    assert context.register_page.is_password_confirm_error_displayed()
+    context.register_page.is_password_confirm_error_displayed()
 
 
 @then('Completed registration message is displayed')
 def step_impl(context):
-    assert context.register_page.is_complete_registration_message_displayed()
+    context.register_page.is_complete_registration_message_displayed()
 
 
 @then('"{message}" message is displayed')

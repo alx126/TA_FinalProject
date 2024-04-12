@@ -10,7 +10,8 @@ Feature: Test the functionality of the Login Page
     Then Login page URL is "https://demo.nopcommerce.com/login"
 
 
-  @login_
+  @login @success
+    #Se ruleaza dupa "Test complete registration"
   Scenario: Check that the login is done successfully with a registered account
     When I insert "alex.popa@fakes.com" in the email input
     When I insert "myPassw0rd" in the password input

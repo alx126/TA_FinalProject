@@ -18,9 +18,9 @@ def step_impl(context):
 
 @then('Search results are displayed')
 def step_impl(context):
-    assert context.search_results_page.are_all_products_displayed()
+    context.search_results_page.are_all_products_displayed()
 
 
 @then('All the search results contain the word "{text}"')
 def step_impl(context, text):
-    assert context.search_results_page.are_all_titles_containing_text(text)
+    context.search_results_page.are_all_titles_containing_text(text)

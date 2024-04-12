@@ -2,7 +2,7 @@
 
 
 
-Implementare teste automate pentru magazin online
+## Implementare teste automate pentru magazin online
 
 
 Site: https://demo.nopcommerce.com/
